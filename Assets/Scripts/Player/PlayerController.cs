@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Rigidbody2D rb;
+    private float moveX;
+    public float speed;
+
+
+// Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<RigidBody2D>();
+        moveX = Input.GetAxisraw("Horizontal");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Move();
     }
 }
